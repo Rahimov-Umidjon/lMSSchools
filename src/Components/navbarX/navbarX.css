@@ -1,0 +1,62 @@
+.navbar-x{
+    width: 250px;
+    height: 100vh;
+    background-color: #100D2E;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navbar-close{
+    color: white;
+    padding: 16px;
+}
+.navbar-link{
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+.navbar-item{
+    /*border: 2px solid red;*/
+    position: relative;
+    overflow: hidden;
+}
+.navbar-link::after{
+    width: 20px;
+    height: 20px ;
+    content: " ";
+    background: url("../../../public/right-icon.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+/*.navbar-header{*/
+/*    border: 1px solid red;*/
+
+/*}*/
+.active-navbar{
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+/*.active-navbar-icon::after{*/
+/*    */
+/*}*/
+
+.active-navbar::after{
+    transition: 0.5s;
+    right: 4px;
+}
+
+.navbar-close{
+    cursor: pointer;
+}
+.navbar-close:hover{
+    border: 1px solid white;
+    border-radius: 5px;
+}

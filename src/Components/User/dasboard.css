@@ -1,0 +1,94 @@
+.dropdown-content {
+    color: black;
+    border-radius: 10px;
+    gap: 5px;
+    background-color: transparent;
+    border-color:#100D2E ;
+}
+.dropdown-content::after{
+    display: none;
+}
+
+.wrapper-right{
+    overflow-y: scroll;
+    width: calc(100% - 250px);
+    height: 100vh;
+    padding: 20px 15px;
+    background-color: #f4f3fc ;
+    /*background-color: white;*/
+}
+.dropdown-text{
+    text-align: start;
+}
+.card-img{
+    width: 120px;
+    height: 120px;
+}
+.wrapper-leadership{
+    width: 100%;
+    flex-wrap: nowrap;
+    /*overflow: hidden;*/
+    /*position: relative;*/
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.wrapper-leadership::-webkit-scrollbar {
+    display: none;
+}
+
+
+.carousel-teacher{
+    position: relative;
+}
+
+
+.after-specialization{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+.after-specialization:hover{
+    background-color: #f4f3fc;
+}
+.before-specialization:hover{
+    background-color: #f4f3fc;
+}
+.before-specialization{
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    cursor: pointer;
+}
+.event{
+    width: 33%;
+    padding: 10px;
+    border: 1px solid #100D2E;
+    border-radius: 10px;
+}
+.my-school{
+    /*border: 1px solid #100D2E;*/
+    border-radius: 10px;
+    background: white;
+}
+.leadership-item{
+    padding-right: 10px;
+    padding-left: 0px;
+}
