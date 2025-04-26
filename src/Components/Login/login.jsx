@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Container, Form, Button, Row, Col} from 'react-bootstrap';
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {getUserToken, signUserStart, signUserSuccess} from "../../slice/auth";
+import {signUserStart, signUserSuccess} from "../../slice/auth";
 import AuthService from "../../service/auth";
-import NavbarX from "../navbarX/navbarX";
-import {GetItem} from "../../helpers/persistance-storage";
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -14,7 +12,6 @@ const Login = () => {
     const dispatch = useDispatch();
     const isLoading = useSelector(state => state.auth.isLoading);
     const users = useSelector(state => state.auth.user);
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,16 +27,6 @@ const Login = () => {
 
         }
     };
-
-    // const getUser = async () => {
-    //     const respons = await AuthService.getUser();
-    //     console.log(respons);
-    // }
-    //
-    // useEffect(() => {
-    //     getUser();
-    // } , [])
-
 
     return (
         <Container className="w-100 vh-100 d-flex justify-content-center align-items-center">

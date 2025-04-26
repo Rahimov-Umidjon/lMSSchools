@@ -81,14 +81,32 @@
     width: 33%;
     padding: 10px;
     border: 1px solid #100D2E;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 .my-school{
     /*border: 1px solid #100D2E;*/
-    border-radius: 10px;
+    border-radius: 6px;
     background: white;
 }
 .leadership-item{
     padding-right: 10px;
     padding-left: 0px;
 }
+.border-blue{
+    border: 1px solid #100D2E;
+}
+.table-border-radius{
+    border-radius: 6px!important;
+    border-collapse: separate; /* radius ishlashi uchun */
+    border-spacing: 0;
+}
+
+.td-border{
+    border: none;
+    border-right: 1px solid #100D2E;
+}
+
+/*table tr:last-child td:first-child {*/
+/*    border: 2px solid orange;*/
+/*    border-bottom-left-radius: 10px!important;*/
+/*}*/

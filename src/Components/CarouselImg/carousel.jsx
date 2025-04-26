@@ -71,7 +71,7 @@ export const CarouselTeacher = (props) => {
                     {
                         (props.value === 'wrapperSpecialization' ? leadership : teachers ).map((item, index) => (
                                 <Col key={index} lg={2} md={4} ms={6} className={'leadership-item '}>
-                                    <Card className={'h-100 my-school pt-3 '}>
+                                    <Card className={'h-100 my-school pt-3 border-blue '}>
                                         <Card.Img className={ 'card-img mx-auto'} style={{borderRadius:"20px",width:'100px',height:'100px'}} variant="top" src={item.image}/>
                                         <Card.Body>
                                             <h6 className={'text-center'}>{item.first_name} {item.last_name}</h6>

@@ -143,7 +143,7 @@ function MyCourses(props) {
             <Row className={'gallery my-school mx-0 my-3  w-100 p-3 '}>
                 <div className={'d-flex pb-2 align-items-center justify-content-between  '}>
                     <h3> Gallery </h3>
-                    <p className={'m-0'} onClick={()=> navigate('/school-gallery')}>Batafsil</p>
+                    <p style={{cursor:'pointer'}} className={' m-0'} onClick={()=> navigate('/school-gallery')}>Batafsil</p>
                 </div>
                 <Col lg={3} md={4} ms={6} className={'gallery   '}>
                     <img style={{width: "100%"}} src="school3.webp" alt="84521"/>
