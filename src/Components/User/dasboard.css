@@ -105,8 +105,15 @@
     border: none;
     border-right: 1px solid #100D2E;
 }
-
-/*table tr:last-child td:first-child {*/
-/*    border: 2px solid orange;*/
-/*    border-bottom-left-radius: 10px!important;*/
-/*}*/
+.search{
+    width: 30%;
+    position: relative;
+}
+.search-img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-50%);
+    top: 50%;
+}

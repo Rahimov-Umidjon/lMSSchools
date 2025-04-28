@@ -1,10 +1,53 @@
-import React from 'react';
-import {Col, Dropdown, Row, Card} from "react-bootstrap";
+import React, {useState} from 'react';
+import {Col, Dropdown, Row, Card, Button} from "react-bootstrap";
 import {useSelector} from "react-redux";
 
 function MyClass(props) {
 
     const user = useSelector(state => state.auth.user);
+    const [sciences , setSciences] = useState([
+        "Ona tili va adabiyoti",
+        "Chet tili",
+        "Matematika",
+        "Fizika",
+        "Biologiya",
+        "Tarix",
+        "Geografiya",
+        "Informatika va axborot texnologiyalari",
+        "Tasviriy san’at va chizmachilik",
+        "Musiqa madaniyati",
+        "Jismoniy tarbiya",
+        "Huquq asoslari  ",
+        "Texnologiya  "
+    ]);
+    const [inputValue , setInputValue] = useState("");
+
+    const  searchSciences =()=>{
+        // const trSciences = document.getElementById("tr-sciences");
+        for (let i = 0; i < sciences.length; i++) {
+            if (sciences[i].toLowerCase().replace(/\s/g , '').includes(inputValue)) {
+                console.log(inputValue);
+                // trSciences.innerHTML = " "
+                // const element = document.createElement("tr");
+                // trSciences.append(element)
+                return (
+                    <tr id={'tr-science'} key={i} style={{verticalAlign: 'middle'}}>
+                        <th style={{width: '1%', whiteSpace: 'nowrap'}} scope="row" className={'pe-3'}>{i + 1}
+                        </th>
+                        <td>{sciences[i]}</td>
+                        <td>2024-2025</td>
+                        <td>O'zbek tili</td>
+                        <td style={{width: '1%', whiteSpace: 'nowrap'}}>
+                            <Button variant={'outline-primary'}
+                                    className={'btn-color d-inline-block '}>Batafsil</Button>
+                        </td>
+                    </tr>
+                )
+            }
+        }
+    }
+
+
 
     return (
         <div className={'wrapper-right'}>
@@ -44,45 +87,53 @@ function MyClass(props) {
 
                 <div className={'  p-0 d-flex align-items-center justify-content-between  '}>
                     <div className={'d-flex w-25 gap-3  '}>
-                        <div className={'form-control  '}>7-B sinf</div>
-                        <select name="quarter" id="quarter" className={'form-control  '}>
+                        <div className={'form-control border-blue '}>7-B sinf</div>
+                        <select name="quarter" id="quarter" className={'form-control form-select border-blue'}>
                             <option value="1">1-chorak</option>
                             <option value="2">2-chorak</option>
                             <option value="3">3-chorak</option>
                             <option value="4">4-chorak</option>
                         </select>
                     </div>
-                    <input type="text" className={'form-control w-25'}/>
+                    <div className={'search'}>
 
-
-                    {/*<Card className={'p-0 border-0 m-0 w-25'}>*/}
-                    {/*    <Col   className={'d-flex align-items-center justify-content-center   p-0 m-0'}>*/}
-                    {/*<table className={'m-0 table table-bordered border-blue text-center table-border-radius '}>*/}
-                    {/*    <tbody>*/}
-                    {/*    <tr>*/}
-                    {/*        <td className={'td-border'}>Darsni o'zlashtirish</td>*/}
-                    {/*        <td className={'border-0'}>88%</td>*/}
-                    {/*    </tr>*/}
-                    {/*    </tbody>*/}
-                    {/*</table>*/}
-                    {/*<input type="text"/>*/}
-                    {/*    </Col>*/}
-                    {/*</Card>*/}
-                    {/*<Card className={'p-0 border-0 m-0 w-25'}>*/}
-                    {/*    <Col   className={'d-flex align-items-center justify-content-center   p-0 m-0'}>*/}
-                    {/*        <table className={'m-0 table table-bordered border-blue text-center table-border-radius '}>*/}
-                    {/*            <tbody>*/}
-                    {/*            <tr>*/}
-                    {/*                <td className={'td-border'}>Darsni o'zlashtirish</td>*/}
-                    {/*                <td className={'border-0'}>88%</td>*/}
-                    {/*            </tr>*/}
-                    {/*            </tbody>*/}
-                    {/*        </table>*/}
-                    {/*    </Col>*/}
-                    {/*</Card>*/}
+                        <input onChange={(e)=> setInputValue(e.target.value)}  id={'search-input'} type="text" className={'form-control search-input border-blue'}/>
+                        <img   src="./search.png" alt="dfv" className={'search-img'}/>
+                    </div>
                 </div>
 
-
+                <div className={'mt-3 p-0 border '}>
+                    <table className="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Fanlar</th>
+                            <th scope="col">O'quv yili</th>
+                            <th scope="col">Ta'lim tili</th>
+                            <th scope="col">Batfsil</th>
+                        </tr>
+                        </thead>
+                        <tbody id={'tr-sciences'}>
+                        {
+                            searchSciences()
+                        }
+                        {
+                            sciences.map((item, i) => (
+                                <tr  key={i} style={{verticalAlign: 'middle'}}>
+                                    <th style={{width: '1%', whiteSpace: 'nowrap'}} scope="row" className={'pe-3'}>{i + 1}
+                                    </th>
+                                    <td>{item}</td>
+                                    <td>2024-2025</td>
+                                    <td>O'zbek tili</td>
+                                    <td style={{width: '1%', whiteSpace: 'nowrap'}}>
+                                        <Button variant={'outline-primary'} className={'btn-color d-inline-block '}>Batafsil</Button>
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                        </tbody>
+                    </table>
+                </div>
             </Row>
         </div>
     );
