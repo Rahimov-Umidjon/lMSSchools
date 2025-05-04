@@ -2,8 +2,9 @@
 @import "Home/home.css";
 @import "navbarX/navbarX.css";
 @import "User/dasboard.css";
-@import "User/my courses/myCourses.css";
+@import "User/myCourses/myCourses.css";
 @import "CarouselImg/carousel.css";
 @import "User/aboutUser/aboutUser.css";
-@import "User/school gallery/schoolGallery.css";
+@import "User/schoolGallery/schoolGallery.css";
+@import "User/lessonPlan/lessonPlan.css";
 

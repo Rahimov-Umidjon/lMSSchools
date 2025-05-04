@@ -11,7 +11,7 @@ import {
     Daily,
     HomeWork,
     Chats,
-    AboutUser, SchoolGallery
+    AboutUser, SchoolGallery, LessonPlan
 } from "./Components";
 import {useDispatch, useSelector} from "react-redux";
 import AuthService from "./service/auth";
@@ -25,13 +25,11 @@ function App(props) {
     const navigate = useNavigate();
     const token = GetUserItem('token')
 
-
     const GetUser = async () => {
         try {
             const response = await AuthService.getUser();
             dispatch(getUserToken(response.data));
-        }
-        catch (error) {
+        } catch (error) {
             console.log(error);
         }
     }
@@ -52,17 +50,18 @@ function App(props) {
             }
 
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/register" element={<Register/>} />
-                <Route path="/dashboard" element={<Dashboard/>} />
-                <Route path="/my-courses" element={<MyCourses/>} />
-                <Route path="/school-gallery" element={<SchoolGallery/>} />
-                <Route path="/my-teacher/:id" element={<AboutUser/>} />
-                <Route path="/my-class" element={<MyClass/>} />
-                <Route path="/my-daily" element={<Daily/>} />
-                <Route path="/my-home-work" element={<HomeWork/>} />
-                <Route path="/my-chat" element={<Chats/>} />
+                <Route path="/" element={<Home/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/my-courses" element={<MyCourses/>}/>
+                <Route path="/school-gallery" element={<SchoolGallery/>}/>
+                <Route path="/my-teacher/:id" element={<AboutUser/>}/>
+                <Route path="/my-class" element={<MyClass/>}/>
+                <Route path="/my-daily" element={<Daily/>}/>
+                <Route path="/my-home-work" element={<HomeWork/>}/>
+                <Route path="/my-chat" element={<Chats/>}/>
+                <Route path="/lesson-plan" element={<LessonPlan/>}/>
             </Routes>
         </div>
     );

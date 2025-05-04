@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Col, Dropdown, Row, Card, Button} from "react-bootstrap";
 import {useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 function MyClass(props) {
 
@@ -17,36 +18,10 @@ function MyClass(props) {
         "Tasviriy san’at va chizmachilik",
         "Musiqa madaniyati",
         "Jismoniy tarbiya",
-        "Huquq asoslari  ",
-        "Texnologiya  "
+        "Huquq asoslari",
+        "Texnologiya"
     ]);
-    const [inputValue , setInputValue] = useState("");
-
-    const  searchSciences =()=>{
-        // const trSciences = document.getElementById("tr-sciences");
-        for (let i = 0; i < sciences.length; i++) {
-            if (sciences[i].toLowerCase().replace(/\s/g , '').includes(inputValue)) {
-                console.log(inputValue);
-                // trSciences.innerHTML = " "
-                // const element = document.createElement("tr");
-                // trSciences.append(element)
-                return (
-                    <tr id={'tr-science'} key={i} style={{verticalAlign: 'middle'}}>
-                        <th style={{width: '1%', whiteSpace: 'nowrap'}} scope="row" className={'pe-3'}>{i + 1}
-                        </th>
-                        <td>{sciences[i]}</td>
-                        <td>2024-2025</td>
-                        <td>O'zbek tili</td>
-                        <td style={{width: '1%', whiteSpace: 'nowrap'}}>
-                            <Button variant={'outline-primary'}
-                                    className={'btn-color d-inline-block '}>Batafsil</Button>
-                        </td>
-                    </tr>
-                )
-            }
-        }
-    }
-
+    const navigate = useNavigate();
 
 
     return (
@@ -96,8 +71,7 @@ function MyClass(props) {
                         </select>
                     </div>
                     <div className={'search'}>
-
-                        <input onChange={(e)=> setInputValue(e.target.value)}  id={'search-input'} type="text" className={'form-control search-input border-blue'}/>
+                        <input    id={'search-input'} type="text" className={'form-control search-input border-blue'}/>
                         <img   src="./search.png" alt="dfv" className={'search-img'}/>
                     </div>
                 </div>
@@ -114,9 +88,7 @@ function MyClass(props) {
                         </tr>
                         </thead>
                         <tbody id={'tr-sciences'}>
-                        {
-                            searchSciences()
-                        }
+
                         {
                             sciences.map((item, i) => (
                                 <tr  key={i} style={{verticalAlign: 'middle'}}>
@@ -126,7 +98,7 @@ function MyClass(props) {
                                     <td>2024-2025</td>
                                     <td>O'zbek tili</td>
                                     <td style={{width: '1%', whiteSpace: 'nowrap'}}>
-                                        <Button variant={'outline-primary'} className={'btn-color d-inline-block '}>Batafsil</Button>
+                                        <Button onClick={()=> navigate('/lesson-plan')} variant={'outline-primary'} className={'btn-color d-inline-block '}>Batafsil</Button>
                                     </td>
                                 </tr>
                             ))

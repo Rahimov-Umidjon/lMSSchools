@@ -1,0 +1,81 @@
+[
+  {
+    "sinf": 1,
+    "fanlar": [
+      {
+        "fan": "Matematika",
+        "darslar": [
+          { "#": 1, "mavzu": "Natural sonlar", "uyga_vazifa": "10 ta misol yechish" },
+          { "#": 2, "mavzu": "Qo‘shish va ayirish", "uyga_vazifa": "5 ta masala yozish" }
+        ]
+      },
+      {
+        "fan": "Ona tili",
+        "darslar": [
+          { "#": 1, "mavzu": "So‘z turkumlari", "uyga_vazifa": "20 ta so‘z tahlil qilish" },
+          { "#": 2, "mavzu": "Gap bo‘laklari", "uyga_vazifa": "5 ta gap tuzish" }
+        ]
+      },
+      {
+        "fan": "Tarix",
+        "darslar": [
+          { "#": 1, "mavzu": "Qadimgi dunyo", "uyga_vazifa": "Sarlavha ostida konspekt" },
+          { "#": 2, "mavzu": "O‘rta asrlar", "uyga_vazifa": "2 bet referat" }
+        ]
+      }
+    ]
+  },
+  {
+    "sinf": 2,
+    "fanlar": [
+      {
+        "fan": "Matematika",
+        "darslar": [
+          { "#": 1, "mavzu": "Natural sonlar", "uyga_vazifa": "10 ta misol yechish" },
+          { "#": 2, "mavzu": "Qo‘shish va ayirish", "uyga_vazifa": "5 ta masala yozish" }
+        ]
+      },
+      {
+        "fan": "Ona tili",
+        "darslar": [
+          { "#": 1, "mavzu": "So‘z turkumlari", "uyga_vazifa": "20 ta so‘z tahlil qilish" },
+          { "#": 2, "mavzu": "Gap bo‘laklari", "uyga_vazifa": "5 ta gap tuzish" }
+        ]
+      },
+      {
+        "fan": "Tarix",
+        "darslar": [
+          { "#": 1, "mavzu": "Qadimgi dunyo", "uyga_vazifa": "Sarlavha ostida konspekt" },
+          { "#": 2, "mavzu": "O‘rta asrlar", "uyga_vazifa": "2 bet referat" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "sinf": 11,
+    "fanlar": [
+      {
+        "fan": "Matematika",
+        "darslar": [
+          { "#": 1, "mavzu": "Natural sonlar", "uyga_vazifa": "10 ta misol yechish" },
+          { "#": 2, "mavzu": "Qo‘shish va ayirish", "uyga_vazifa": "5 ta masala yozish" }
+        ]
+      },
+      {
+        "fan": "Ona tili",
+        "darslar": [
+          { "#": 1, "mavzu": "So‘z turkumlari", "uyga_vazifa": "20 ta so‘z tahlil qilish" },
+          { "#": 2, "mavzu": "Gap bo‘laklari", "uyga_vazifa": "5 ta gap tuzish" }
+        ]
+      },
+      {
+        "fan": "Tarix",
+        "darslar": [
+          { "#": 1, "mavzu": "Qadimgi dunyo", "uyga_vazifa": "Sarlavha ostida konspekt" },
+          { "#": 2, "mavzu": "O‘rta asrlar", "uyga_vazifa": "2 bet referat" }
+        ]
+      }
+    ]
+  }
+]
