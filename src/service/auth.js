@@ -32,6 +32,10 @@ const AuthService = {
     async getSchoolGallery(){
         const response = await axios.get("/school_gallery");
         return response;
+    },
+    async getAllStudents(){
+        const response = await axios.get("/users/students");
+        return response;
     }
 }
 

@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Col, Dropdown, Row, Card, Button} from "react-bootstrap";
 import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
+import AuthService from "../../service/auth";
 
 function MyClass(props) {
 
@@ -22,6 +24,19 @@ function MyClass(props) {
         "Texnologiya"
     ]);
     const navigate = useNavigate();
+
+    const getAllStudent = async () => {
+        try {
+            const response = await AuthService.getAllStudents();
+            console.log(response);
+        }catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getAllStudent();
+    } , [])
 
 
     return (
